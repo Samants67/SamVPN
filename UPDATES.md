@@ -1,4 +1,4 @@
-# Nova Proxy - Build Updates
+# SamVPN - Build Updates
 
 This page tracks what ships in each `worker.js` build. The deployable `worker.js`
 in this repo is an **obfuscated production build**. The readable source is kept
