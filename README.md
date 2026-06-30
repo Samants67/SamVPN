@@ -1,232 +1,181 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/iiviirv/irnova-site/main/brand/nova-logo-gradient.svg" width="70" alt="Nova">
+<img src="https://raw.githubusercontent.com/iiviirv/irnova-site/main/brand/nova-logo-gradient.svg" width="70" alt="SamVPN">
 
 <div align="right">
-  <a href="README.fa.md"><img src="https://raw.githubusercontent.com/IRNova/Nova-Proxy/main/flag-iran.svg" height="16" alt="Iran (Lion and Sun)" /> فارسی</a>
+  <a href="README.fa.md">🇮🇷 فارسی</a>
 </div>
 
-# Nova Proxy
+# 🌟 SamVPN Project
 
-**A personal, censorship-resistant proxy + dashboard on a single Cloudflare Worker.**
+**SamVPN - Developed by Saman Taghavi (samants)**
 
-VLESS · Trojan · Shadowsocks · gRPC · XHTTP over WebSocket + TLS — with a self-contained
-bilingual (English + فارسی) dashboard, per-ISP clean-IP optimization, multi-user
-accounts, a Telegram bot, WARP, proxy chaining, and backend mode. Runs on Cloudflare's **free** tier.
+A practical graphical panel to provide Worker subscriptions with VLESS, Trojan, and Warp proxies along with proxy chaining, full DNS settings, clean IP, and advanced routing for users of all platforms using Amnezia, Wireguard, Sing-box, Clash/Mihomo, and Xray cores.
 
-[![License](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/version-3.6.3-blueviolet?style=for-the-badge)](https://github.com/IRNova/Nova-Proxy)
-[![Stars](https://img.shields.io/github/stars/IRNova/Nova-Proxy?style=for-the-badge&color=0ea5e9)](https://github.com/IRNova/Nova-Proxy)
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/badge/version-3.6.3-blueviolet?style=for-the-badge)](#)
 
 </div>
 
 ---
 
-## 🌐 Links
+## 🌐 Contact Links
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/🌐%20Website-novaproxy.online-0ea5e9?style=for-the-badge)](https://novaproxy.online/)
-[![Telegram Channel](https://img.shields.io/badge/✈️%20Telegram%20Channel-@irnova__proxy-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnova_proxy)
-[![Telegram Group](https://img.shields.io/badge/👥%20Telegram%20Group-@irnovaproxy__group-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irnovaproxy_group)
-[![YouTube](https://img.shields.io/badge/▶️%20YouTube-@novaproxyir-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@novaproxyir)
-[![X (Twitter)](https://img.shields.io/badge/𝕏%20X-@irNovaProxy-000000?style=for-the-badge&logo=x)](https://x.com/irNovaProxy)
+[![Telegram](https://img.shields.io/badge/✈️%20Telegram-@irants67-0ea5e9?style=for-the-badge&logo=telegram)](https://t.me/irants67)
+
 </div>
 
 ---
 
-## 📖 What is Nova Proxy?
+## 📖 What is SamVPN?
 
-Nova Proxy is a **personal, all-in-one censorship-circumvention proxy** that runs entirely on Cloudflare Workers — the **free tier**. It combines a powerful proxy (VLESS, Trojan, Shadowsocks over WebSocket/gRPC/XHTTP) with a **full bilingual admin dashboard**, all in a single deployable Worker.
+SamVPN is an **all-in-one personal anti-censorship proxy** that runs completely on Cloudflare Workers using the **Free Plan**. It combines a powerful proxy engine (VLESS, Trojan, Shadowsocks over WebSocket/gRPC/XHTTP) with a **comprehensive dual-language management panel** in a single Worker.
 
-**What makes Nova different:**
-- ⚡ **Zero infrastructure** — no VPS, no domain needed to start
-- 🌍 **Per-ISP clean-IP** — auto-optimized for each Iranian ISP
-- 👥 **Multi-user** — per-user links with quota, expiry, and on/off control
-- 🤖 **Telegram bot** — full management from Telegram
-- 🔗 **Proxy chaining** — SOCKS5, HTTP, HTTPS, TURN, SSTP
-- 🛡️ **Advanced evasion** — ECH, TLS fragment, 0-RTT, fingerprint
-- 🧩 **Backend mode** — connect to your own Xray/sing-box VPS for VLESS + UDP calls
-
----
-
-## ⚡ Quick Install
-
-Choose your preferred method:
-
-### 🖥️ Nova Wizard (Desktop)
-
-The official desktop installer with a graphical interface — no technical knowledge required.
-
-[**→ Download Nova Wizard for Windows & Linux**](https://github.com/IRNova/Nova-Wizard)
-
-### 🌐 Web Installer
-
-Visit the official site and follow the step-by-step guide:
-
-[**→ novaproxy.online/install**](https://novaproxy.online/install)
+**What makes SamVPN different:**
+- ⚡ **No Infrastructure Needed** — No VPS, no domain required to start.
+- 🌍 **Clean IP per ISP** — Automatic optimization tailored for each Iranian network operator.
+- 👥 **Multi-user Support** — Dedicated subscription links with traffic quotas, expiration dates, and toggle controls.
+- 🤖 **Telegram Bot** — Complete control and management via Telegram.
+- 🔗 **Proxy Chaining** — Support for SOCKS5, HTTP, HTTPS, TURN, SSTP.
+- 🛡️ **Advanced Bypass** — ECH, TLS fragment, 0-RTT, fingerprinting.
+- 🧩 **Backend Mode** — Connect to a personal Xray/sing-box VPS for native VLESS + video/voice calling support.
 
 ---
 
-### 📱 Mobile
+## ⚡ Quick Setup
 
-- **Android:** **Radar** — an Android app with a built-in wizard for one-click Nova Proxy installation on Cloudflare. Coming soon.
-- **iOS:** Currently in development.
+After forking or uploading the code to your repository, you can customize the configuration based on the `wrangler.jsonc` documentation and deploy it using Wrangler commands.
 
 ---
 
-## 🛰 Backend Mode (VLESS + Voice/Video Calls)
+## 🛰 Backend Mode (VLESS + Video/Voice Calls)
 
-Cloudflare Workers cannot run native TCP proxy or handle UDP traffic directly. To enable these features, Nova supports **Backend Mode** — forward traffic to your own Xray or sing-box VPS.
-
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/IRNova/Tools/main/nova-backend.sh)
-```
-
-After running the installer, enable Backend Mode in the Nova panel (Network Settings → Backend Mode) and enter your VPS URL.
+Cloudflare Workers cannot run native TCP proxies or handle UDP traffic directly. To enable these features, SamVPN supports **Backend Mode** — forwarding traffic to a personal Xray or sing-box VPS.
 
 ---
 
 ## 📋 Prerequisites
 
-- A **Cloudflare account** (free) with Workers enabled
-- A **KV namespace** (created automatically by the one-click deploy, or manually via Wrangler)
-- (Optional) Node.js v18+ and Wrangler CLI for local testing
+- A **Cloudflare Account** (Free tier) with Workers enabled.
+- A **KV Namespace** (automatically created with auto-deploy or manually via Wrangler).
+- (Optional) Node.js v18+ and Wrangler CLI for local testing.
 
 ---
 
-## 🧬 Feature Evolution (v1 → v2 → v3)
+## 🧬 SamVPN Admin Panel Features
 
-| Feature | v1 | v2 | v3 |
-|---------|:--:|:--:|:--:|
-| Auto subscription link | ✅ | ✅ | ✅ |
-| Base64 format | ✅ | ✅ | ✅ |
-| Clash / Mihomo | ✅ | ✅ | ✅ |
-| sing-box | ✅ | ✅ | ✅ |
-| Loon | ✅ | ✅ | ✅ |
-| Surge | ✅ | ✅ | ✅ |
-| Load Balancing | ✅ | ✅ | ✅ |
-| Health Check | ✅ | ✅ | ✅ |
-| Ping test | ✅ | ✅ | ✅ |
-| Best config selector | ✅ | ✅ | ✅ |
-| QR Code | ✅ | ✅ | ✅ |
-| Display config list | ✅ | ✅ | ✅ |
-| DoH proxy | ✅ | ✅ | ✅ |
-| DNS encryption | ✅ | ✅ | ✅ |
-| DNS Load Balance / Failover / Caching | ✅ | ✅ | ✅ |
-| Local DNS | ✅ | ✅ | ✅ |
-| Anti Sanction DNS | ✅ | ✅ | ✅ |
-| Fake DNS | ✅ | ✅ | ✅ |
-| Routing / GeoIP / GeoSite | ✅ | ✅ | ✅ |
-| Domestic Bypass | ✅ | ✅ | ✅ |
-| IPv6 support | ✅ | ✅ | ✅ |
-| AdBlock / PornBlock | ✅ | ✅ | ✅ |
-| Cloudflare ports | ✅ | ✅ | ✅ |
-| Trojan direct link | ✅ | ✅ | ✅ |
-| Clash direct link | ✅ | ✅ | ✅ |
-| Global SOCKS5 mode | ✅ | ✅ | ✅ |
-| Global HTTP mode | ✅ | ✅ | ✅ |
-| Clean Cloudflare IP scanner | ✅ | ✅ | ✅ |
-| Telegram notifications | ✅ | ✅ | ✅ |
-| Telegram bot management | ✅ | ✅ | ✅ |
-| Quantumult X | ➖ | ✅ | ✅ |
-| Mixed Auto (client detection) | ➖ | ✅ | ✅ |
-| Random Path / Wildcard Host | ➖ | ✅ | ✅ |
-| Admin dashboard (RTL Persian) | ➖ | ✅ | ✅ |
-| Simple / Advanced mode | ➖ | ✅ | ✅ |
-| Dark mode | ➖ | ✅ | ✅ |
-| JSON Config Editor | ➖ | ✅ | ✅ |
-| Log Viewer | ➖ | ✅ | ✅ |
-| Reset config | ➖ | ✅ | ✅ |
-| VLESS / Trojan / Shadowsocks | ➖ | ✅ | ✅ |
-| gRPC / XHTTP transport | ➖ | ✅ | ✅ |
-| WebSocket Early Data | ➖ | ✅ | ✅ |
-| mux=0 for Shadowsocks | ➖ | ✅ | ✅ |
-| SOCKS5 chain | ➖ | ✅ | ✅ |
-| HTTP/HTTPS CONNECT chain | ➖ | ✅ | ✅ |
-| TURN / SSTP chain | ➖ | ✅ | ✅ |
-| Global HTTPS / TURN / SSTP mode | ➖ | ✅ | ✅ |
-| Whitelist domains | ➖ | ✅ | ✅ |
-| Chain in subscription link | ➖ | ✅ | ✅ |
-| TLS 1.3 / 1.2 | ➖ | ✅ | ✅ |
-| ChaCha20-Poly1305 / AES-GCM | ➖ | ✅ | ✅ |
-| Custom ClientHello / ALPN | ➖ | ✅ | ✅ |
-| SNI fragment / TLS fragment | ➖ | ✅ | ✅ |
-| Fallback to ChaCha20 | ➖ | ✅ | ✅ |
-| AES-128/256-GCM (Shadowsocks) | ➖ | ✅ | ✅ |
-| Auto detection / Dynamic session key | ➖ | ✅ | ✅ |
-| Online / API optimize, Custom IP list | ➖ | ✅ | ✅ |
-| Random IP generator / Result tabs | ➖ | ✅ | ✅ |
-| Save/Override results | ➖ | ✅ | ✅ |
-| Per-ISP clean-IP optimization | ➖ | ✅ | ✅ |
-| Telegram Webhook / Bot config in panel | ➖ | ✅ | ✅ |
-| Cloudflare Usage Query / API Token | ➖ | ✅ | ✅ |
-| Custom Usage API | ➖ | ✅ | ✅ |
-| VLESS / Shadowsocks direct link | ➖ | ✅ | ✅ |
-| Subscription with token | ➖ | ✅ | ✅ |
-| Full clipboard copy | ➖ | ✅ | ✅ |
-| KV storage (Config, CF, TG, IPs, Logs) | ➖ | ✅ | ✅ |
-| Password login / Auth Cookie | ➖ | ✅ | ✅ |
-| UUID validation / Token auth (MD5) | ➖ | ✅ | ✅ |
-| Speed test block | ➖ | ✅ | ✅ |
-| Environment variables | ➖ | ✅ | ✅ |
-| Persian RTL / Responsive panel | ➖ | ✅ | ✅ |
-| Leaflet map / Toast / Modal | ➖ | ✅ | ✅ |
-| Collapse modules / SVG icons | ➖ | ✅ | ✅ |
-| Copy to clipboard | ➖ | ✅ | ✅ |
-| Concurrent TCP dial / 0-RTT | ➖ | ✅ | ✅ |
-| Uplink coalescing / Downlink grain | ➖ | ✅ | ✅ |
-| Upload queue limit | ➖ | ✅ | ✅ |
-| IP Load Balance / Proxy Fallback | ➖ | ✅ | ✅ |
-| Tokenless format-named sub links | ➖ | ➖ | ✅ |
-| Permanent GitHub sub-mirror | ➖ | ➖ | ✅ |
-| Bundled dashboard (Static Assets) | ➖ | ➖ | ✅ |
-| Bilingual EN + FA UI + guided tour | ➖ | ➖ | ✅ |
-| Malware / Phishing / Cryptominers blocking | ➖ | ➖ | ✅ |
-| QUIC blocking | ➖ | ➖ | ✅ |
-| Backend mode (VLESS + UDP / voice-video calls) | ➖ | ➖ | ✅ |
-| ECH (Encrypted Client Hello) | ➖ | ➖ | ✅ |
-| Port-spread / Multi-transport | ➖ | ➖ | ✅ |
-| Telegram auto-announce domain updates | ➖ | ➖ | ✅ |
-| Daily traffic chart + upload/download split | ➖ | ➖ | ✅ |
-| Per-user link + total/daily quota + expiry + on/off + auto-disable | ➖ | ➖ | ✅ |
-| Per-user sub link with username + secret key authentication | ➖ | ➖ | ✅ |
-| Read-after-write KV cache for instant user config propagation | ➖ | ➖ | ✅ |
-| NAT64 / IPv6 transition support | ➖ | ➖ | ✅ |
-| Panel password change + 2FA (TOTP) + recovery | ➖ | ➖ | ✅ |
-| Login rate limiting + session management | ➖ | ➖ | ✅ |
-| WARP account register + WARP+ license + WoW | ➖ | ➖ | ✅ |
-| WARP endpoint switcher + Iran-friendly endpoints | ➖ | ➖ | ✅ |
-| WARP Amnezia mode + WARP Noise | ➖ | ➖ | ✅ |
-| One-tap Iran mode + live config report | ➖ | ➖ | ✅ |
-| Backup & Restore (export/import all settings) | ➖ | ➖ | ✅ |
-| Cross-infra fallback (non-CF nodes) | ➖ | ➖ | ✅ |
-| Self-healing domain pool + health checking | ➖ | ➖ | ✅ |
-| Bypass countries (China, Russia, sanctions) | ➖ | ➖ | ✅ |
-| Custom routing rules | ➖ | ➖ | ✅ |
-| Central management API + fleet stats + broadcast | ➖ | ➖ | ✅ |
-| Kill switch (global pause/resume) | ➖ | ➖ | ✅ |
-| Instance heartbeat + announcement system | ➖ | ➖ | ✅ |
-| D1 database support (KV migration) | ➖ | ➖ | ✅ |
-| /install wizard + one-click Deploy to Cloudflare | ➖ | ➖ | ✅ |
-
----
-
-## 💜 Support
-
-If Nova helps you, please **⭐ star the repo** and consider a small donation — it keeps the project alive and free for everyone.
-
-<div align="center">
-
-### ⭐ [Star Nova on GitHub](https://github.com/IRNova/Nova-Proxy) ⭐
-
-[![Star on GitHub](https://img.shields.io/github/stars/IRNova/Nova-Proxy?style=for-the-badge&logo=github&label=Star%20Nova&color=8957e5)](https://github.com/IRNova/Nova-Proxy)
-
-| Coin | Address |
-|------|---------|
-| **TON** | `UQD51lGC35rP_SbVYgbFA7CEEii4GVMFgqj4N8fiGi6m425w` |
-
-</div>
+| Feature | Status |
+|--------|:--:|
+| Auto subscription link generation | ✅ |
+| Base64 format export | ✅ |
+| Clash / Mihomo support | ✅ |
+| sing-box support | ✅ |
+| Loon support | ✅ |
+| Surge support | ✅ |
+| Load Balancing | ✅ |
+| Health Check | ✅ |
+| Ping test | ✅ |
+| Best config selection | ✅ |
+| QR Code generation | ✅ |
+| Display config list | ✅ |
+| DoH proxy | ✅ |
+| DNS encryption | ✅ |
+| Load Balance / Failover / Caching DNS | ✅ |
+| Local DNS bypass | ✅ |
+| Anti-Sanction DNS | ✅ |
+| Fake DNS / IP | ✅ |
+| Routing / GeoIP / GeoSite | ✅ |
+| Domestic Bypass (Direct connection to Iranian sites) | ✅ |
+| IPv6 support | ✅ |
+| AdBlock + PornBlock | ✅ |
+| Cloudflare custom ports | ✅ |
+| Trojan direct link | ✅ |
+| Clash direct link | ✅ |
+| Global SOCKS5 mode | ✅ |
+| Global HTTP mode | ✅ |
+| Clean Cloudflare IP scanner | ✅ |
+| Telegram notifications | ✅ |
+| Telegram bot management | ✅ |
+| Quantumult X support | ✅ |
+| Mixed Auto-client detection | ✅ |
+| Random Path / Wildcard Host | ✅ |
+| Persian RTL responsive Admin dashboard | ✅ |
+| Simple + Advanced mode toggle | ✅ |
+| Dark mode | ✅ |
+| JSON Config Editor | ✅ |
+| Log Viewer | ✅ |
+| Reset configuration | ✅ |
+| VLESS + Trojan + Shadowsocks | ✅ |
+| gRPC + XHTTP transport | ✅ |
+| WebSocket Early Data | ✅ |
+| mux=0 for Shadowsocks | ✅ |
+| SOCKS5 chain | ✅ |
+| HTTP/HTTPS CONNECT chain | ✅ |
+| TURN + SSTP chain | ✅ |
+| Global HTTPS / TURN / SSTP mode | ✅ |
+| Whitelist domains | ✅ |
+| Chain in subscription link | ✅ |
+| TLS 1.3 / 1.2 support | ✅ |
+| ChaCha20-Poly1305 / AES-GCM ciphers | ✅ |
+| Custom ClientHello / ALPN | ✅ |
+| SNI fragment / TLS fragment | ✅ |
+| Fallback to ChaCha20 | ✅ |
+| AES-128/256-GCM (Shadowsocks) | ✅ |
+| Auto-detect / Dynamic session key | ✅ |
+| Online Optimization / API / Custom IP list | ✅ |
+| Random IP generation / Categorized results | ✅ |
+| Save/Override scanning results | ✅ |
+| Per-ISP clean-IP optimization | ✅ |
+| Telegram Webhook / Bot settings in panel | ✅ |
+| Cloudflare usage monitor / API Token tracking | ✅ |
+| Custom Usage API | ✅ |
+| VLESS + Shadowsocks direct link | ✅ |
+| Subscription with token authentication | ✅ |
+| Full clipboard copy (One-click) | ✅ |
+| KV Storage configuration (Config, CF, TG, IPs, Logs) | ✅ |
+| Password login / Auth Cookie | ✅ |
+| UUID Validation / Token Auth (MD5) | ✅ |
+| Speed test blocking | ✅ |
+| Environment variables management | ✅ |
+| Leaflet Map / Toast / Modal UI components | ✅ |
+| Collapsible modules / SVG icons | ✅ |
+| Concurrent TCP dial / 0-RTT | ✅ |
+| Uplink/downlink traffic aggregation | ✅ |
+| Upload queue limit | ✅ |
+| Load Balance IP / Proxy Fallback | ✅ |
+| Tokenless subscription link with named formats | ✅ |
+| Permanent GitHub mirror for subscription | ✅ |
+| Monolithic panel layout (Static Assets) | ✅ |
+| Dual-language interface + Guided tour | ✅ |
+| Malware / Phishing / Cryptominers blocking | ✅ |
+| QUIC blocking | ✅ |
+| Backend Mode (VLESS + UDP / Video Call) | ✅ |
+| ECH (Encrypted SNI) | ✅ |
+| Port-spread / Multi-transport | ✅ |
+| Automatic domain update notification on Telegram | ✅ |
+| Daily traffic charts + Upload/Download breakdown | ✅ |
+| Dedicated user links + Total/Daily quota + Expiry + On/Off | ✅ |
+| Subscription link with Username + Secret Key | ✅ |
+| Read-after-write KV caching for instant updates | ✅ |
+| NAT64 support / IPv6 transition | ✅ |
+| Panel password change + 2FA (TOTP) + Recovery code | ✅ |
+| Login attempt limit + Session management | ✅ |
+| WARP registration + WARP+ License + WoW | ✅ |
+| WARP endpoint modification + Iran endpoints | ✅ |
+| Amnezia WARP mode + WARP Noise | ✅ |
+| One-click Iran mode + Live config report | ✅ |
+| Full settings backup and restore | ✅ |
+| Middleware fallback (Non-Cloudflare nodes) | ✅ |
+| Self-healing domain pool + Health check | ✅ |
+| Country bypass (China, Russia, Sanctions) | ✅ |
+| Custom routing rules | ✅ |
+| Centralized management API + Fleet stats + Global broadcast | ✅ |
+| Kill switch | ✅ |
+| Instance heartbeat + Notification system | ✅ |
+| D1 Database support (KV migration) | ✅ |
+| Wizard installation /install + One-click deploy | ✅ |
 
 ---
 
@@ -234,7 +183,6 @@ If Nova helps you, please **⭐ star the repo** and consider a small donation �
 
 Built with ❤️ for a free and open internet.
 
-- [@iiviirv](https://github.com/iiviirv) — contributor
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Xray-core](https://github.com/XTLS/xray-core)
 
@@ -242,25 +190,15 @@ Built with ❤️ for a free and open internet.
 
 ## License
 
-MIT — see the [LICENSE](LICENSE) file.
+MIT — See [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-Made for Iran <img src="https://raw.githubusercontent.com/IRNova/Nova-Proxy/main/flag-iran.svg" height="16" alt="Iran (Lion and Sun)" /> — and anyone who needs a free, open internet.
-**Nothing about your traffic is logged. The proxy is yours.**
+Made for Iran <img src="https://raw.githubusercontent.com/IRNova/Nova-Proxy/main/flag-iran.svg" height="16" alt="Iran" /> — and everyone who needs a free internet.  
+**No traffic log is stored. The proxy is entirely yours.**
 
-📖 [Persian version](README.fa.md)
-
----
-<a href="https://www.star-history.com/?repos=IRNova%2FNova-Proxy&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=IRNova/Nova-Proxy&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=IRNova/Nova-Proxy&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=IRNova/Nova-Proxy&type=date&legend=top-left" />
- </picture>
-</a>
+📖 [نسخه فارسی / Persian version](README.fa.md)
 
 </div>
-
